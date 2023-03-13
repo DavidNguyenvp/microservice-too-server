@@ -15,7 +15,20 @@ const password = (value, helpers) => {
   return value;
 };
 
+const serviceName = (value, helpers) => {
+  console.log(value)
+  if (value.length < 3) {
+    return helpers.message('service must be at least 3 characters');
+  }
+
+  if (value.length > 225) {
+    return helpers.message('service must be maximum 255 characters');
+  }
+  return value
+}
+
 module.exports = {
   objectId,
   password,
+  serviceName
 };
