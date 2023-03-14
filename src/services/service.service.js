@@ -68,7 +68,6 @@ const deleteServiceById = async (serviceId) => {
  * @returns {Promise<Service>}
  */
 const getServiceById = async (id) => {
-  console.log(id)
   return Service.findById(id);
 };
 
