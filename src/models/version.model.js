@@ -24,7 +24,7 @@ const versionSchema = mongoose.Schema(
         trim: true,
         lowercase: true,
     },
-    dependences: {
+    dependences: [{
      dependenceVersion: {
         type: String,
         required: true,
@@ -49,7 +49,7 @@ const versionSchema = mongoose.Schema(
         trim: true,
         lowercase: false,
       },
-    },
+    }],
   },
   {
     timestamps: true,
