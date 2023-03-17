@@ -22,7 +22,8 @@ const updateVersion = catchAsync(async (req, res) => {
   });
   
   const deleteVersion = catchAsync(async (req, res) => {
-    await versionService.deleteVersionById(req.params.id)
+    const query = pick(req.query, ['id']);
+    await versionService.deleteVersionById(query.id)
     res.status(httpStatus.NO_CONTENT).send();
   });
 

@@ -21,7 +21,8 @@ const updateService = catchAsync(async (req, res) => {
   });
   
   const deleteService = catchAsync(async (req, res) => {
-    await serviceService.deleteServiceById(req.params.id)
+    const query = pick(req.query, ['id']);
+    await serviceService.deleteServiceById(query.id)
     res.status(httpStatus.NO_CONTENT).send();
   });
 
