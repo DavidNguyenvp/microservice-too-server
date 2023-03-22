@@ -9,7 +9,7 @@ const createService = catchAsync(async (req, res) => {
 });
 
 const getServices = catchAsync(async (req, res) => {
-  const filter = pick(req.query, ['serviceName', 'serviceUrl', 'status']);
+  const filter = pick(req.query, ['serviceName', 'serviceUrl', 'status', 'description']);
   const options = pick(req.query, ['sortBy', 'limit', 'page']);
   const result = await serviceService.queryServices(filter, options);
   res.send(result);

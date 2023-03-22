@@ -18,6 +18,12 @@ const serviceSchema = mongoose.Schema(
       trim: true,
       lowercase: true,
     },
+    description: {
+      type: String,
+      required: false,
+      trim: true,
+      lowercase: true,
+    },
     status: {
       type: String,
       required: true,

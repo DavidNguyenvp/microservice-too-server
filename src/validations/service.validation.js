@@ -6,6 +6,7 @@ const createService = {
     serviceName: Joi.string().required().custom(serviceName),
     serviceUrl: Joi.string().required(),
     status: Joi.string().required(),
+    description: Joi.string().required(),
   }),
 };
 
